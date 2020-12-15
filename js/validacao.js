@@ -111,3 +111,20 @@ function checaCPFRepetido(cpf) {
 
     return cpfValido
 }
+
+function checaEstruturaCPF(cpf) {
+    const multiplicador = 10
+
+    return checaDigitoVerificador(cpf, multiplicador)
+}
+
+function confirmaDigito(soma) {
+    return 11 - (soma % 11)
+}
+
+
+// 123 456 789 09
+
+// let soma = (11 * 1) + (10 * 2) + (9 * 3) ... (2 * 0)
+
+// let digitoVerificador = 11 - (soma % 11)
